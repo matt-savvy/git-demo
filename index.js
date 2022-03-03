@@ -3,7 +3,9 @@ function isEven(number) {
 }
 
 function isVowel(letter) {
-    if (['a', 'e', 'i', 'o', 'u'].includes(letter)) {
+    const lowerLetter = letter.toLowerCase();
+
+    if (['a', 'e', 'i', 'o', 'u'].includes(lowerLetter)) {
         return true;
     }
 
