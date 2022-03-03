@@ -25,13 +25,12 @@ function wordWins(word) {
     return isEven(length) && isVowel(firstLetter) && isVowel(lastLetter);
 }
 
-function main() {
-    // first two values are always node and file path, drop these.
-    const words = process.argv.slice(2);
-
+function game(words) {
     words.forEach((word) => {
         console.log(word, wordWins(word));
     });
 }
 
-main();
+// first two values are always node and file path, drop these.
+const words = process.argv.slice(2);
+game(words);
