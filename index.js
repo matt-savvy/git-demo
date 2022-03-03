@@ -17,6 +17,9 @@ function isVowel(letter) {
     return false;
 }
 
+/*
+ * Returns true if the word wins the game
+ */
 function wordWins(word) {
     const length = word.length;
     const firstLetter = word[0];
