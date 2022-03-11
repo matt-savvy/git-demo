@@ -1,5 +1,5 @@
-function isntOdd(number) {
-   return number % 2 === 0;
+function isntOdd(num) {
+   return num % 2 === 0;
 }
 
 function isVowel(letter) {
