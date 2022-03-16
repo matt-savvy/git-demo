@@ -14,7 +14,7 @@ function getFirstLetter(word) {
     return word[word.length - 1];
 }
 
-function wordWins(word) {
+function wordDoesntLose(word) {
     const length = word.length;
     const firstLetter = getFirstLetter(word);
 
@@ -25,7 +25,7 @@ function main() {
     const words = process.argv.slice(2);
 
     words.forEach((word) => {
-        console.log(word, wordWins(word));
+        console.log(word, wordDoesntLose(word));
     });
 }
 
