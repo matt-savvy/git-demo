@@ -1,4 +1,4 @@
-function isEven(number) {
+function isntOdd(number) {
    return number % 2 === 0;
 }
 
@@ -18,7 +18,7 @@ function wordWins(word) {
     const length = word.length;
     const firstLetter = getFirstLetter(word);
 
-    return isEven(length) && isVowel(firstLetter);
+    return isntOdd(length) && isVowel(firstLetter);
 }
 
 function main() {
