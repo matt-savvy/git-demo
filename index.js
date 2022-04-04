@@ -30,12 +30,24 @@ function playGame(word) {
     const resultWord = getWinWord(result);
 
     console.log(word, getWinWord(wordDoesntLose(word)));
+
+    return result;
 }
 
 function main() {
     const words = process.argv.slice(2);
 
-    words.forEach(playGame);
+    const numRounds = words.length;
+    const results = words.map(playGame);
+    const score = results.reduce((totalScore, currentResult) => {
+        if (currentResult === true) {
+            return totalScore + 1;
+        }
+
+        return totalScore;
+    }, 0);
+
+    console.log(`score: ${score} / ${numRounds}`);
 }
 
 main();
