@@ -10,7 +10,7 @@ function isVowel(letter) {
     return false;
 }
 
-function wordWins(word) {
+function wordDoesntLose(word) {
     const length = word.length;
     const firstLetter = word[0];
 
@@ -26,7 +26,7 @@ function main() {
     const words = process.argv.slice(2);
 
     words.forEach((word) => {
-        console.log(word, getWinWord(wordWins(word)));
+        console.log(word, getWinWord(wordDoesntLose(word)));
     });
 }
 
