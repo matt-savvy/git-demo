@@ -21,17 +21,21 @@ function wordDoesntLose(word) {
     return isntOdd(length) && isVowel(firstLetter);
 }
 
-
 function getWinWord(value) {
     return value ? 'win' : 'lose';
+}
+
+function playGame(word) {
+    const result = wordDoesntLose(word);
+    const resultWord = getWinWord(result);
+
+    console.log(word, getWinWord(wordDoesntLose(word)));
 }
 
 function main() {
     const words = process.argv.slice(2);
 
-    words.forEach((word) => {
-        console.log(word, getWinWord(wordDoesntLose(word)));
-    });
+    words.forEach(playGame);
 }
 
 main();
