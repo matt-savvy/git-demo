@@ -10,9 +10,13 @@ function isVowel(letter) {
     return false;
 }
 
+function getFirstLetter(word) {
+    return word[word.length - 1];
+}
+
 function wordDoesntLose(word) {
     const length = word.length;
-    const firstLetter = word[0];
+    const firstLetter = getFirstLetter(word);
 
     return isntOdd(length) && isVowel(firstLetter);
 }
