@@ -17,11 +17,16 @@ function wordWins(word) {
     return isEven(length) && isVowel(firstLetter);
 }
 
+
+function getWinWord(value) {
+    return value ? 'win' : 'lose';
+}
+
 function main() {
     const words = process.argv.slice(2);
 
     words.forEach((word) => {
-        console.log(word, wordWins(word));
+        console.log(word, getWinWord(wordWins(word)));
     });
 }
 
